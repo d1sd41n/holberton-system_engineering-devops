@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# conects to the server by ssh using rsa key
+ssh -i ~/.ssh/holberton ubuntu@35.237.173.35
