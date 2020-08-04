@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# ssh conf
+
+Host 35.237.173.35
+    IdentityFile ~/.ssh/holberton
+    PasswordAuthentication no
+    BatchMode yes
