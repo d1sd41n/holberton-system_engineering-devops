@@ -3,11 +3,11 @@
 
 apt-get update
 apt-get install -y nginx
-echo "Holberton School" > /var/www/html/index.html
+echo "Holberton School" > /etc/www/html/index.html
 printf %s "server {
     listen 80;
     listen [::]:80 default_server;
-    root   /var/nginx/html;
+    root   /etc/nginx/html;
     index  index.html;
     location /redirect_me {
         return 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;
