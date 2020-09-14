@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """get data and saves it in a json"""
+import json
 import requests
 from sys import argv
-import json
 
 
 if __name__ == '__main__':

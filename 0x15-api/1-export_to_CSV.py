@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """get from from the api and saves it in a csv file"""
+import csv
 import requests
 from sys import argv
-import csv
 
 
 if __name__ == "__main__":
