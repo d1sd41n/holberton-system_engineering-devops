@@ -1,8 +1,12 @@
-exec { 'replace ULIMIT':
-    path    => '/usr/bin',
-    command => 'sudo sed -i "s/ULIMIT=\"-n 15\"/ULIMIT=\"-n 262144\"/g" /etc/default/nginx',
+# Sky is the limit, let's bring that limit higher
+
+exec {'fix--for-nginx':
+    command => "sed -i 's/15/1000/g' /etc/default/nginx",
+    path    => [ '/bin/', '/sbin/' , '/usr/bin/', '/usr/sbin/' ],
 }
--> exec { 'restart NGINX':
-    path    => '/usr/bin',
+
+exec {'arestart-nginx':
     command => 'service nginx restart',
+    path    => [ '/bin/', '/sbin/' , '/usr/bin/', '/usr/sbin/' ],
 }
+
